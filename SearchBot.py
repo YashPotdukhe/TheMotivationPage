@@ -4,11 +4,6 @@ import requests
 import json
 
 
-def jprint(obj):
-    # create a formatted string of the Python JSON object
-    text = json.dumps(obj, sort_keys=True, indent=4)
-    print(text)
-
 
 # Authenticate to Twitter
 
@@ -25,7 +20,6 @@ auth.set_access_token(access_token, access_secret)
 api = tweepy.API(auth)
 
 hashtag = '#MotivationalQuote'
-
 tweetNum = 10
 
 tweets = tweepy.Cursor(api.search, hashtag).items(tweetNum)

@@ -34,5 +34,4 @@ response = requests.get('https://type.fit/api/quotes')
 quoteDump = json.dumps(response.json())
 quoteList = json.loads(quoteDump)
 
-
 updateStatus()
